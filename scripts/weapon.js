@@ -3,8 +3,8 @@ export class Weapon {
         this.name = name; // Name of the weapon
         this.description = description; // Description of the weapon
         this.damage = damage; // Damage the weapon inflicts
-        this.attackSpeed = attackSpeed; // How 
-        this.attackRange = attackRange;
-        this.type = type;
+        this.attackSpeed = attackSpeed; // Time to attack and time to attack again
+        this.attackRange = attackRange; // Range in which enemies will get hit
+        this.type = type; // Is it melee or ranged
     }
 }
