@@ -1,5 +1,5 @@
 export class Allies {
-    constructor(name, hp, speed, atkSpeed, dmg, range, atkTypes, icon, description, animFrames, sounds, soundRange, roamRange, commands,) {
+    constructor(name, hp, speed, atkSpeed, dmg, range, atkTypes, icon, description, animFrames, sounds, soundRange, roamRange, commands) {
         this.name = name;
         this.hp = hp;
         this.speed = speed;
