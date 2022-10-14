@@ -14,5 +14,35 @@ export class Monsters {
         this.soundRange = soundRange
         this.height = height;
         this.width = width;
+    };
+     monster() {
+       this.name;
+       this.hp;
+       this.speed;
+       this.atkSpeed;
+       this.dmg;
+       this.range;
+       this.atkTypes;
+       this.icon;
+       this.description;
+       this.animFrames;
+       this.sounds;
+       this.soundRange;
+       this.height;
+       this.width;
+    };
+
+    render(container, classes) {
+        let newElement = document.createElement("div");
+        newElement.setAttribute("class", classes);
+        newElement.style.width = `${this.width}px`;
+        newElement.style.height = `${this.height}px`;
+        container.appendChild(newElement);
+        this.rendered = true;
+        this.element = newElement;
+        return newElement;
+    }
+    attack(cue, direction) {
+        
     }
 }
