@@ -1,5 +1,5 @@
 export class Items {
-    constructor() {
+    constructor(name, description, effect, icon, pickUpSound, useSound, type, animFrames,) {
         this.name = name;
         this.description = description;
         this.effect = effect;

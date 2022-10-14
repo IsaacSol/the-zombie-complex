@@ -1,5 +1,5 @@
 export class settings {
-    constructor() {
+    constructor(name, keybinds, soundToggle) {
         this.name = name;
         this.keybinds = keybinds;
         this.soundToggle = soundToggle;
