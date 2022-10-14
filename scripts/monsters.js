@@ -1,5 +1,5 @@
 export class Monsters {
-    constructor(name, hp, speed, atkSpeed, dmg, range, atkTypes, icon, description, animFrames, sounds, soundRange) {
+    constructor(name, hp, speed, atkSpeed, dmg, range, atkTypes, icon, description, animFrames, sounds, soundRange, height, width) {
         this.name = name;
         this.hp = hp;
         this.speed = speed;
@@ -12,5 +12,7 @@ export class Monsters {
         this.animFrames = animFrames;
         this.sounds = sounds;
         this.soundRange = soundRange
+        this.height = height;
+        this.width = width;
     }
 }

@@ -1,5 +1,5 @@
 export class Allies {
-    constructor(name, hp, speed, atkSpeed, dmg, range, atkTypes, icon, description, animFrames, sounds, soundRange, roamRange, commands,) {
+    constructor(name, hp, speed, atkSpeed, dmg, range, atkTypes, icon, description, animFrames, sounds, soundRange, roamRange, commands, height, width) {
         this.name = name;
         this.hp = hp;
         this.speed = speed;
@@ -14,5 +14,7 @@ export class Allies {
         this.soundRange = soundRange;
         this.roamRange = roamRange;
         this.commands = commands;
+        this.height = height;
+        this.width = width;
     }
 }
