@@ -1,0 +1,26 @@
+.overlay {
+    width: 100%;
+    position: absolute;
+    display: block;
+}
+
+#overHeaderContainer {
+    display: inline-flex;
+    width: 100%;
+}
+
+.overlayButton {
+    background-color: red;
+    height: 10%;
+    color: black;
+    transition: 200ms;
+    border-radius: 15px;
+    width: 10%;
+    height: 80px;
+    border: none;
+}
+
+.overlayButton:hover {
+    background-color: darkred;
+    color: white;
+}
