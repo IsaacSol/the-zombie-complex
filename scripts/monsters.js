@@ -42,7 +42,19 @@ export class Monsters {
         this.element = newElement;
         return newElement;
     }
+
+    unrender() {
+        if (this.rendered == true) {
+            // Removes this.element from the parent html
+            this.element.parentNode.removeChild(this.element)
+        } else {
+            console.log(this.name, "already unrendered!")
+        }
+    }
+
     attack(cue, direction) {
         
     }
+
+
 }
