@@ -24,6 +24,14 @@ export class Allies {
         this.atkSpeed;
         this.dmg;
         this.range;
-        
     }
+    
+    attack(cue, direction,type, targets) {
+        attackAnimation(cue, direction,type)
+        for(target in targets) {
+            if(hasCollided(target, this)) {
+                target.gotAttacked(this.dmg, direction)
+            }
+        }
+    }   
 }
