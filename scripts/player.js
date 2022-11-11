@@ -1,4 +1,4 @@
-
+import {hasCollided} from '/scripts/util/collision.js'
 
 export class Player {
     constructor(username, hp, stamina, xpos, ypos, allies, buffs, weaponEquipped, consumableEquipped, inventory, width, height, animFrames, speed) {
@@ -18,8 +18,8 @@ export class Player {
         this.animFrames = animFrames;
         this.speed = speed;
     }
-    attack(cue, direction, targets){
-        attackAnimation(cue, direction)
+    attack(cue, direction, type, targets){
+        attackAnimation(cue, direction, type)
         for (target in targets) {
             if (hasCollided(target, this)) {
                 target.gotAttacked(this.weaponEquipped.damage, direction)
@@ -28,6 +28,29 @@ export class Player {
     }
 
     gotAttacked(damage, direction) {
-        
+        if (this.hp <= damage) {
+            // This character died
+            console.log(this.username, "has died")
+        } else {
+            this.hp = this.hp - damage;
+            // TODO comeback after testing and change these numbers. Consider basing them off of the players stamina, hp, buffs, and the damage taken from the hit.
+            if(direction.includes("up")) {
+                this.updatePosition({x: this.xpos, y: this.ypos + 15})
+            }
+            if(direction.includes("down")) {
+                this.updatePosition({x: this.xpos, y: this.ypos - 15})
+            }
+            if(direction.includes("left")) {
+                this.updatePosition({x: this.xpos - 15, y: this.ypos})
+            }
+            if(direction.includes("right")) {
+                this.updatePosition({x: this.xpos + 15, y: this.ypos})
+            }
+            
+        }
+    }
+
+    updatePosition(updatedPosition) {
+
     }
 }
