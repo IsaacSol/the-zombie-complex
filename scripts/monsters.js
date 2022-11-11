@@ -42,7 +42,12 @@ export class Monsters {
         this.element = newElement;
         return newElement;
     }
-    attack(cue, direction) {
+    
+    attack(cue, direction, target) {
+        
+    }   
+
+    attackAnimation(cue, direction, target) {
         
     }
 }
