@@ -1,3 +1,5 @@
+
+
 export class Player {
     constructor(username, hp, stamina, xpos, ypos, allies, buffs, weaponEquipped, consumableEquipped, inventory, width, height, animFrames, speed) {
         this.username = username; // Name of player
@@ -19,9 +21,13 @@ export class Player {
     attack(cue, direction, targets){
         attackAnimation(cue, direction)
         for (target in targets) {
-            if (target.colide(this)) {
-                
+            if (hasCollided(target, this)) {
+                target.gotAttacked(this.weaponEquipped.damage, direction)
             }
         }
+    }
+
+    gotAttacked(damage, direction) {
+        
     }
 }
