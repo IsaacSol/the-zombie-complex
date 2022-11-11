@@ -16,5 +16,14 @@ export class Allies {
         this.commands = commands;
         this.height = height;
         this.width = width;
+    };
+    Allies() {
+        this.name;
+        this.hp;
+        this.speed;
+        this.atkSpeed;
+        this.dmg;
+        this.range;
+        
     }
 }
